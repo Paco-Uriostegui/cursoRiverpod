@@ -6,7 +6,9 @@ import 'package:practicas_riverpod/03_provider/state_provider_screen.dart';
 import 'package:practicas_riverpod/04_todo/todo_screen.dart';
 import 'package:practicas_riverpod/05_future_provider/future_provider_screen.dart';
 import 'package:practicas_riverpod/06_family_future_provider/family_future_provider_screen.dart';
+import 'package:practicas_riverpod/07_streamprovider/corregido_stream_provider.dart';
 import 'package:practicas_riverpod/07_streamprovider/stream_provider_screen.dart';
+import 'package:practicas_riverpod/08_state_notifier/state_notifier_screen.dart';
 import 'package:practicas_riverpod/home_screen.dart';
 
 
@@ -59,10 +61,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     //   builder: (context, state) => const ChangeNotifierScreen(),
     // ),
 
-    // GoRoute(
-    //   path: '/state-notifier-provider',
-    //   builder: (context, state) => const StateNotifierScreen(),
-    // ),
+    GoRoute(
+      path: '/state-notifier-provider',
+      builder: (context, state) => const StateNotifierScreen(),
+    ),
 
 
 
