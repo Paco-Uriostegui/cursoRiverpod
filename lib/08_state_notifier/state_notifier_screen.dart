@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:practicas_riverpod/04_todo/todo_providers.dart';
 import 'package:practicas_riverpod/08_state_notifier/state_notifier_provider.dart';
+<<<<<<< HEAD
 import 'package:practicas_riverpod/08_state_notifier/todo2.dart';
+=======
+>>>>>>> 81593b6268f070b80b8caf0822b23dcff1bb78c9
 
 
 class StateNotifierScreen extends ConsumerWidget {
@@ -25,11 +28,19 @@ class StateNotifierScreen extends ConsumerWidget {
 
         SegmentedButton(
           segments: const[
+<<<<<<< HEAD
             ButtonSegment(value: FiltroEnum.all, icon: Text('Todos')),
             ButtonSegment(value: FiltroEnum.completed, icon: Text('Invitados')),
             ButtonSegment(value: FiltroEnum.pending, icon: Text('No invitados')),
           ], 
           selected: <FiltroEnum>{currentFilter},
+=======
+            ButtonSegment(value: TodoFilter.all, icon: Text('Todos')),
+            ButtonSegment(value: TodoFilter.completed, icon: Text('Invitados')),
+            ButtonSegment(value: TodoFilter.pending, icon: Text('No invitados')),
+          ], 
+          selected: <TodoFilter>{currentFilter},
+>>>>>>> 81593b6268f070b80b8caf0822b23dcff1bb78c9
           onSelectionChanged: (value) {
             ref.read(todoFilterProvider.notifier).state = value.first;
             

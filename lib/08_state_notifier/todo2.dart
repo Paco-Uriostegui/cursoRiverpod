@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 enum FiltroEnum { all, completed, pending } 
 
 
+=======
+>>>>>>> 81593b6268f070b80b8caf0822b23dcff1bb78c9
 class Todo2 {
 
   final String id;

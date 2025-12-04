@@ -26,6 +26,7 @@ final todosProvider = StateProvider<List<Todo>>((ref) {
 });
 
 final filteredListProvider = Provider<List<Todo>>((ref) {
+<<<<<<< HEAD
   final enums = ref.watch(todoFilterProvider);
   final todosNombres = ref.watch(todosProvider);
 
@@ -38,5 +39,19 @@ final filteredListProvider = Provider<List<Todo>>((ref) {
       return todosNombres.where((element) => element.done).toList();
     case TodoFilter.pending:
       return todosNombres.where((elemente) => !elemente.done).toList();
+=======
+  final filter = ref.watch(todoFilterProvider);
+  final todos = ref.watch(todosProvider);
+
+  switch (filter) {
+  
+    case TodoFilter.all:
+      return todos;
+
+    case TodoFilter.completed:
+      return todos.where((element) => element.done).toList();
+    case TodoFilter.pending:
+      return todos.where((elemente) => !elemente.done).toList();
+>>>>>>> 81593b6268f070b80b8caf0822b23dcff1bb78c9
   }
 });
